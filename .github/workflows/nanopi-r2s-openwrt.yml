@@ -2,7 +2,7 @@ name: NanoPi R2S OpenWrt
 
 on:
   schedule:
-    - cron: 6 1 * * *
+    - cron: 38 17 * * *
   watch:
     types: started
 
