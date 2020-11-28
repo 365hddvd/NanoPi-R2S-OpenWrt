@@ -55,7 +55,7 @@ jobs:
       run: |
         rm -rf ./artifact/
         mkdir -p ./artifact/
-        cp home/runner/*squashfs-sysupgrade.img.gz ./artifact/
+        cp bin/targets/rockchip/*squashfs-sysupgrade.img.gz ./artifact/
         cd openwrt
         cd ..
         zip -r artifact.zip ./artifact/
