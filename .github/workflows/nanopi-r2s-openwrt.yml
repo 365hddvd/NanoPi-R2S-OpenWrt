@@ -1,6 +1,11 @@
 name: NanoPi R2S OpenWrt
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'go'
   schedule:
     - cron: 34 5 * * *
   watch:
