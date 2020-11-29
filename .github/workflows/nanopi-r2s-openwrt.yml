@@ -6,8 +6,6 @@ on:
       - master
     paths:
       - 'go'
-  schedule:
-    - cron: 5 9 * * *
   watch:
     types: started
 
