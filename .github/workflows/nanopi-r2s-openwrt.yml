@@ -58,7 +58,7 @@ jobs:
       run: |
         rm -rf ./artifact/
         mkdir -p ./artifact/
-        cp bin/targets/rockchip/*squashfs-sysupgrade.img.gz ./artifact/
+        cp home/runner/*squashfs-sysupgrade.img.gz ./artifact/
         cd openwrt
         cd ..
         zip -r artifact.zip ./artifact/
@@ -90,4 +90,3 @@ jobs:
         asset_path: ./artifact.zip
         asset_name: ${{ steps.assemble_artifact.outputs.release_tag }}-ROM.zip
         asset_content_type: application/zip
-
