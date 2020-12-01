@@ -10,11 +10,8 @@ on:
     types: started
 
 jobs:
-  OpenWrt-Snapshot:
-    runs-on: ubuntu-18.04
-    steps:
-   Cleanup-Old-Artifacts:
-    needs: [OpenWrt-18_06,OpenWrt-Snapshot]
+  Cleanup-Old-Artifacts:
+    needs: [OpenWrt-Snapshot]
     runs-on: ubuntu-18.04
     steps:
     - name: Cleanup Old Action Artifacts
@@ -33,6 +30,9 @@ jobs:
           repository: ${{ github.repository }}
           retain_days: 7
           keep_minimum_runs: 3
+  OpenWrt-Snapshot:
+    runs-on: ubuntu-18.04
+    steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
     - name: Init Building Dependencies
