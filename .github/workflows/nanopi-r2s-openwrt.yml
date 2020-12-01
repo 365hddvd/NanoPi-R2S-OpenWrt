@@ -20,7 +20,7 @@ jobs:
         token: ${{ github.token }}
         expire-in: 7d
   Cleanup-Workflow-Logs:
-    needs: [OpenWrt-18_06,OpenWrt-Snapshot]
+    needs: [OpenWrt-Snapshot]
     runs-on: ubuntu-18.04
     steps:
       - name: Cleanup Workflow Logs
